@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-import { toast } from "react-toastify";
-import { deleteTodoAPI, fetchTodo, newTodo, updateTodoAPI } from "./api";
+import { deleteTodoAPI, fetchTodo, newTodo, updateTodoAPI } from "../api";
+import toast from "react-hot-toast";
 
 function App() {
   const [todo, setTodo] = useState([]);
@@ -19,13 +19,13 @@ function App() {
         todos[index].completed = false;
         return [...todos];
       });
-      toast.success("Marked as Not Completed!");
+      toast.error("Marked as Not Complete");
     } else {
       setTodo((todos) => {
         todos[index].completed = true;
         return [...todos];
       });
-      toast.success("Marked as Completed!");
+      toast.success("Marked as Complete");
     }
   };
 
@@ -33,6 +33,7 @@ function App() {
   const createNewTodo = async () => {
     const response = await newTodo(formTodo);
     setTodo([response, ...todo]);
+    toast.success("New Task created!");
     setFormTodo("");
   };
 
@@ -43,6 +44,7 @@ function App() {
         task: item,
         edit: true,
       });
+      toast.success("Edit mode ON!");
       return;
     }
     const response = await updateTodoAPI(item);
@@ -50,6 +52,7 @@ function App() {
       task: {},
       edit: false,
     });
+    toast.success("Task edited successfully!");
     setFormTodo("");
   };
 
@@ -58,6 +61,9 @@ function App() {
     const response = await deleteTodoAPI(id);
     if (response.status === 200) {
       setTodo(todo.filter((item) => item.id !== id));
+      toast.success("Task deleted!");
+    } else {
+      toast.error(`ERROR STATUS: ${response.status}`);
     }
   };
 

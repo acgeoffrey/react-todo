@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   height: 100vh;
   width: 100%;
@@ -42,18 +38,17 @@ header {
 
 h1 {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 3rem;
   color: white;
   letter-spacing: 2rem;
 }
 
 .create-todo {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   background-color: hsl(235, 24%, 19%);
   width: 100%;
-
-  border: 2px solid hsl(234, 39%, 85%);
+  border: 3px solid hsl(234, 39%, 85%);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -61,14 +56,14 @@ h1 {
 
 .add-task {
   width: 100%;
-  height: 7rem;
+  height: 4.8rem;
   outline: none;
-  background-color: hsl(235, 24%, 19%);
   border: none;
+  background-color: hsl(235, 24%, 19%);
   color: hsl(234, 39%, 85%);
-  padding-left: 3rem;
+  padding-left: 1.8rem;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
 }
 
@@ -77,14 +72,14 @@ h1 {
 }
 
 .create-btn {
-  width: 3.5rem;
-  height: 3.5rem;
-  font-size: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 50%;
   color: hsl(235, 24%, 19%);
   background-color: white;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   cursor: pointer;
 }
 
@@ -96,21 +91,22 @@ ul {
   /* border: 1px solid #e5e5e5; */
 }
 ul li {
-  padding: 2rem;
-  height: 7rem;
+  padding: 1.4rem;
+  height: 4.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.4rem;
   background-color: hsl(235, 24%, 19%);
   color: hsl(234, 39%, 85%);
-  font-size: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .check-label-div {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 /* #list label {
@@ -121,7 +117,7 @@ ul li {
 
 .icon-div {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 .fa-trash,
