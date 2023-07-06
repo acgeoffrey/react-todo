@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoItem from "./TodoItem";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <header></header>
+      <div className="todo-app">
+        <h1>TODO</h1>
+        <div class="create-todo">
+          <input
+            type="text"
+            class="add-task"
+            id="add"
+            placeholder="Create a new todo..."
+          />
+        </div>
+        <div className="todo-div">
+          <ul id="list">
+            <TodoItem />
+          </ul>
+        </div>
+      </div>
+    </main>
   );
 }
 

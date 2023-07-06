@@ -1,13 +1,124 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(235, 21%, 11%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  width: 100%;
+  height: 25rem;
+  background: url("./images/bg-header.jpeg");
+  background-size: cover;
+}
+
+.todo-app {
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  color: white;
+  letter-spacing: 2rem;
+}
+
+.create-todo {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 7rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.add-task {
+  width: 100%;
+  height: 7rem;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  color: hsl(234, 39%, 85%);
+  padding-left: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.add-task::placeholder {
+  color: hsl(234, 39%, 85%);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  /* border: 1px solid #e5e5e5; */
+}
+ul li {
+  padding: 2rem;
+  height: 7rem;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  font-size: 2rem;
+}
+
+.check-label-div {
+  display: flex;
+}
+
+.checkbox {
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  color: #00a2ff00;
+  border-radius: 50%;
+  border: 2px solid #009fff;
+  z-index: 999;
+}
+
+/* #list label {
+  position: relative;
+  cursor: pointer;
+  align-self: center;
+} */
+
+.delete {
+  height: 28px;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+.delete:hover {
+  cursor: pointer;
 }
