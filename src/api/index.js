@@ -4,7 +4,9 @@ const url = "https://jsonplaceholder.typicode.com/todos";
 //Fetch Todo
 export const fetchTodo = async () => {
   try {
-    const response = await fetch(url);
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1/todos"
+    );
     return await response.json();
   } catch (error) {
     console.log(error);
@@ -14,7 +16,7 @@ export const fetchTodo = async () => {
 //Create New Todo
 export const newTodo = async (title) => {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+    const response = await fetch(url, {
       method: "POST",
       body: JSON.stringify({
         title,
